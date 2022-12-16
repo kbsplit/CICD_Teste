@@ -28,4 +28,4 @@ jobs:
           context: .
           file: ./SD_Projeto/Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_USER }}/sd-projeto:website
+          tags: ${{ secrets.DOCKER_USER }}/sd-projeto:latest
