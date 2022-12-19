@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: website
+  annotations:
+    argocd-image-updater.argoproj.io/image-list: itschaboy/sd-projeto:latest
+    argocd-image-updater.argoproj.io/git-branch: main
+    argocd-image-updater.argoproj.io/write-back-method: git
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/SistemasDistribuidos/SD_Projeto.git
+    targetRevision: HEAD
+    path: ./SD_Projeto
+  destination: 
+    server: https://kubernetes.default.svc
+    namespace: default
+  syncPolicy:
+    automated:
+      selfHeal: true
+      prune: true
