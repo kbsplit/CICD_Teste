@@ -6,6 +6,7 @@ metadata:
     argocd-image-updater.argoproj.io/image-list: itschaboy/sd-projeto:latest
     argocd-image-updater.argoproj.io/write-back-method: git
     argocd-image-updater.argoproj.io/git-branch: main
+    argocd-image-updater.argoproj.io/itschaboy/sd-projeto:latest.update-strategy: digest
 spec:
   project: default
   source:
