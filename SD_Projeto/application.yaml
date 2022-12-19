@@ -2,6 +2,9 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: website
+  annotations:
+    argocd-image-updater.argoproj.io/image-list: website=itschaboy/sd-projeto:latest
+    argocd-image-updater.argoproj.io/website.update-strategy: digest
 spec:
   project: default
   source:
