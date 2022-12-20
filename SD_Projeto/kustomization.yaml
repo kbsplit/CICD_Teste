@@ -8,5 +8,5 @@ namespace: default
 
 images:
 - name: website
-  newName: website
-  newTag: c04606182abb4fb085271f749ba7dde11be0586e
+  newName: itschaboy/sd-projeto
+  newTag: d16fc9ee03e90b1be5c6af2e068158871193d5fd
