@@ -3,6 +3,9 @@ kind: Kustomization
 resources:
 - deployment.yaml
 - service.yaml
+
+namespace: default
+
 images:
 - name: website
   newName: itschaboy/sd-projeto
