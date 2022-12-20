@@ -18,6 +18,7 @@ spec:
       containers:
       - name: website
         image: itschaboy/sd-projeto:latest
+        imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 80
       imagePullSecrets:
