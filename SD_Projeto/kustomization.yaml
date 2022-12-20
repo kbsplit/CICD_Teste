@@ -5,4 +5,4 @@ resources:
 images:
 - name: website
   newName: itschaboy/sd-projeto
-  newTag: 59f025c42f3af58245c4c00d9aa234f6715ed512
+  newTag: 025e625c12a9ac941ac23264754e7b18cfb3c16b
