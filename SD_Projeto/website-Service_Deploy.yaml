@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: website
-        image: itschaboy/sd-projeto:latest
+        image: itschaboy/sd-projeto
         ports:
         - containerPort: 80
       imagePullSecrets:
