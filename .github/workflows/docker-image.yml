@@ -28,4 +28,23 @@ jobs:
           context: .
           file: ./SD_Projeto/Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_USER }}/sd-projeto:latest
+          tags: ${{ github.sha }}/sd-projeto:latest 
+
+        name: kustomize
+        uses: imranismail/setup-kustomize@v1
+        with:
+          kustomize_version: v3.6.1
+
+        name: update k8s
+        run: |
+          cd SD_Projeto
+          kustomize edit set image  website=itschaboy/sd-projeto:${{ github.sha }}
+          cat kustomization.yaml
+
+        name: commit
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "Deploy Action"
+          git commit -am "change image tag"
+        name: push
+        uses: ad-m/github-push-action@master
