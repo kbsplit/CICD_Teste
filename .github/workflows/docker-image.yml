@@ -28,7 +28,7 @@ jobs:
           context: .
           file: ./SD_Projeto/Dockerfile
           push: true
-          tags: ${{ github.sha }, latest 
+          tags: ${{ github.sha }}, latest 
   deploy:
     name: Deploy
     runs-on: ubuntu-latest
