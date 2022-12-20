@@ -28,6 +28,7 @@ jobs:
           context: .
           file: ./SD_Projeto/Dockerfile
           push: true
+          repository: itschaboy/ds-projeto
           tags: ${{ github.sha }}, latest 
   deploy:
     name: Deploy
