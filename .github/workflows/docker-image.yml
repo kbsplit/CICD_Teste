@@ -54,5 +54,5 @@ jobs:
             git commit -am "change image tag"
         
         - name: push
-            uses: ad-m/github-push-action@master
+          uses: ad-m/github-push-action@master
     
