@@ -17,6 +17,7 @@ spec:
     spec:
       containers:
       - name: website
+        namespace: default
         image: itschaboy/sd-projeto:latest
         imagePullPolicy: IfNotPresent
         ports:
