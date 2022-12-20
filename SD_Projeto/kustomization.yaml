@@ -6,4 +6,4 @@ namespace: argocd
 images:
 - name: website
   newName: itschaboy/sd-projeto
-  newTag: c1ecdcd29565b6fdb6297604f2f668cf7123d874
+  newTag: 5213426de11bd39f50fc4f1cee403cdf6ccfeb12
