@@ -45,7 +45,6 @@ jobs:
         run: |
           cd SD_Projeto
           kustomize edit set image website=itschaboy/sd-projeto:${{ github.sha }}
-          cat kustomization.yaml
 
       - name: commit
         run: |
