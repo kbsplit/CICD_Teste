@@ -1,8 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: website-service
-  namespace: website 
+  name: website-service 
   labels:
     app: website
 spec:
