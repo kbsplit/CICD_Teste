@@ -4,10 +4,10 @@ resources:
 - deployment.yaml
 - service.yaml
 
-patches:
+patchesStrategicMerge:
 - deployment.yaml
 
 images:
 - name: website
   newName: itschaboy/sd-projeto
-  newTag: 721de7694a47a5ae30ed224e45311c1355460706
+  newTag: 9eb44d1ba76de0e693fbe066a0a4989d2df2609d
