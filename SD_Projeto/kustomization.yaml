@@ -4,7 +4,8 @@ resources:
 - deployment.yaml
 - service.yaml
 
-
+patches:
+- deployment.yaml
 
 images:
 - name: website
