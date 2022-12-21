@@ -12,12 +12,13 @@ spec:
       app: website
   template:
     metadata:
+      namespace: website
       labels:
         app: website
     spec:
       containers:
       - name: website
-        namespace: website
+        
         image: itschaboy/sd-projeto:latest
         imagePullPolicy: IfNotPresent
         ports:
