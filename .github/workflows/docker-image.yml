@@ -34,7 +34,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: update deployment
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v3
         uses: fjogeleit/yaml-update-action@main
         with:
           valueFile: 'SD_Projeto/deployment.yaml'
