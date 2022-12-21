@@ -26,7 +26,7 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           context: .
-          file: ./SD_Projeto/base/Dockerfile
+          file: ./SD_Projeto/Dockerfile
           push: true
           tags: ${{ secrets.DOCKER_USER }}/sd-projeto:${{ github.sha }}
   deploy:
@@ -43,7 +43,7 @@ jobs:
 
       - name: update k8s
         run: |
-          cd SD_Projeto/base/overlay
+          cd SD_Projeto
           kustomize edit set image website=itschaboy/sd-projeto:${{ github.sha }}
 
       - name: commit
