@@ -1,8 +1,10 @@
-bases:
-  - ../base
-patches:
-  - deployment.yaml
+patchesStrategicMerge:
+- deployment.yaml
 images:
 - name: website
-  newName: website
-  newTag: latest
+  newName: itschaboy/sd-projeto
+  newTag: 934104f01117820be5794e3dc5022b02d82a573b
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+- ../base
