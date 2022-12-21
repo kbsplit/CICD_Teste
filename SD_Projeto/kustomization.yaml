@@ -4,8 +4,7 @@ resources:
 - deployment.yaml
 - service.yaml
 
-patchesStrategicMerge:
-- deployment.yaml
+namespace: website
 
 images:
 - name: website
