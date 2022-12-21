@@ -1,0 +1,8 @@
+bases:
+  - ../base
+patches:
+  - deployment.yaml
+images:
+- name: website
+  newName: website
+  newTag: latest
