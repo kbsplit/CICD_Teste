@@ -43,7 +43,7 @@ jobs:
 
       - name: update k8s
         run: |
-          cd SD_Projeto
+          cd SD_Projeto/base/overlay
           kustomize edit set image website=itschaboy/sd-projeto:${{ github.sha }}
 
       - name: commit
