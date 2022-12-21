@@ -9,4 +9,4 @@ namespace: website
 images:
 - name: website
   newName: itschaboy/sd-projeto
-  newTag: a7826db4becc7bf4311696d160e22edfeb09e9d7
+  newTag: 329c65e9612009dcc76ccf8a5c4f48656d4c1305
