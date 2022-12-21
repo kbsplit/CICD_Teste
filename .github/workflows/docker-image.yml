@@ -40,10 +40,9 @@ jobs:
         uses: fjogeleit/yaml-update-action@main
         with:
           valueFile: 'SD_Projeto/deployment.yaml'
-          targetBranch: main
-          changes: |
-            {
-              "image": ${{ secrets.DOCKER_USER }}/sd-projeto:${{ github.sha }}
-            }
+          propertyPath: 'image'
+          value: ${{ secrets.DOCKER_USER }}/sd-projeto:${{ github.sha }}
+          method: Update
+          commitChange: true
 
     
