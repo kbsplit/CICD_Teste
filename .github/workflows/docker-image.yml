@@ -42,6 +42,7 @@ jobs:
           valueFile: 'SD_Projeto/deployment.yaml'
           propertyPath: 'image'
           value: ${{ secrets.DOCKER_USER }}/sd-projeto:${{ github.sha }}
+          method: Update
           commitChange: false
 
     
