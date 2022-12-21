@@ -26,7 +26,7 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           context: .
-          file: ./SD_Projeto/Dockerfile
+          file: ./SD_Projeto/base/Dockerfile
           push: true
           tags: ${{ secrets.DOCKER_USER }}/sd-projeto:${{ github.sha }}
   deploy:
