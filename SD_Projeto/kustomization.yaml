@@ -10,4 +10,4 @@ patchesStrategicMerge:
 images:
 - name: website
   newName: itschaboy/sd-projeto
-  newTag: 647e3a19e12502551c321cfae8a9754177ccf527
+  newTag: 52df4f0a129408f4600a3731181f0bfbb45ebb7b
