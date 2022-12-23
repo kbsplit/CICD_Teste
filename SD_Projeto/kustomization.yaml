@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+- deployment.yaml
+- service.yaml
+
+namespace: website
+
+images:
+- name: website
+  newName: itschaboy/sd-projeto
+  newTag: 329c65e9612009dcc76ccf8a5c4f48656d4c1305
