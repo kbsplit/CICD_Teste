@@ -7,4 +7,6 @@ resources:
 namespace: website
 
 images:
-  name: website
+- name: website
+  newName: website
+  newTag: latest
