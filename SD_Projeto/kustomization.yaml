@@ -3,10 +3,8 @@ kind: Kustomization
 resources:
 - deployment.yaml
 - service.yaml
-
 namespace: website
-
 images:
 - name: website
-  newName: website
-  newTag: latest
+  newName: itschaboy/sd-projeto
+  newTag: 6b3f5ddeba5b25edabdafc9a7a630767f30cad67
