@@ -42,5 +42,5 @@ jobs:
       with:
         values_files: Website-helm/values.yaml
         tag_keys: .image.repository
-        tag_value: ${{ github.sha }}
+        tag_value: ${{ secrets.DOCKER_USER }}/sd-projeto:${{ github.sha }}
         commit_branch: main
