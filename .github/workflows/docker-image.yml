@@ -43,3 +43,4 @@ jobs:
         values_files: Website-helm/values.yaml
         tag_keys: .image.tag
         tag_value: ${{ github.sha }}
+        commit_branch: main
