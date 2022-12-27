@@ -15,6 +15,7 @@ spec:
       labels:
         app: website
     spec:
+      revisionHistoryLimit: 0
       containers:
       - name: website
         
