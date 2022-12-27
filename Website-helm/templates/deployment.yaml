@@ -18,7 +18,7 @@ spec:
       containers:
       - name: website
         
-        image: itschaboy/sd-projeto:latest
+        image: {{ .Values.image.repository }}
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 80
