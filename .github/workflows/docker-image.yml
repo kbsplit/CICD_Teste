@@ -29,3 +29,16 @@ jobs:
           file: ./SD_Projeto/Dockerfile
           push: true
           tags: ${{ secrets.DOCKER_USER }}/sd-projeto:latest 
+  
+  release: 
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+      with:
+        fetch-depth: '0'  # this is important for the git writeback
+    - name: Update Helm Chart Values
+      uses: Nextdoor/helm-set-image-tag-action@main
+      with:
+        values_files: Website-helm/values.yaml
+        tag_keys: .image.tag
+        tag_value: ${{ github.sha }}
