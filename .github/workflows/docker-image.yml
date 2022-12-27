@@ -41,6 +41,6 @@ jobs:
       uses: Nextdoor/helm-set-image-tag-action@main
       with:
         values_files: Website-helm/values.yaml
-        tag_keys: .image.tag
+        tag_keys: .image.repository
         tag_value: ${{ github.sha }}
         commit_branch: main

@@ -7,7 +7,6 @@ image:
   repository: itschaboy/sd-projeto
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "17ecf98c9d54c9e9991ff7bf391b90b60b628208"
 imagePullSecrets: []
 nameOverride: ""
 fullnameOverride: ""
