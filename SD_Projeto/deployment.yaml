@@ -12,7 +12,6 @@ spec:
       app: website
   template:
     metadata:
-      namespace: website
       labels:
         app: website
     spec:
