@@ -3,7 +3,7 @@ name: ci
 on:
   push:
     paths:
-      - SD_Projeto/**
+      - Website-app/**
     branches:
       - "main"
 
@@ -28,7 +28,7 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           context: .
-          file: ./SD_Projeto/Dockerfile
+          file: ./Website-app/Dockerfile
           push: true
           tags: ${{ secrets.DOCKER_USER }}/sd-projeto:${{ github.sha }}
   
@@ -42,7 +42,7 @@ jobs:
     - name: Update Helm Chart Values
       uses: Nextdoor/helm-set-image-tag-action@main
       with:
-        values_files: Website-helm/values.yaml
-        tag_keys: .image.repository
+        values_files: Helm/values.yaml
+        tag_keys: .image.website
         tag_value: ${{ secrets.DOCKER_USER }}/sd-projeto:${{ github.sha }}
         commit_branch: main

@@ -4,7 +4,8 @@
 
 replicaCount: 3
 image:
-  repository: itschaboy/sd-projeto:3e9fb85e887c1530d31913d6b28b5d55573adf05
+  website: itschaboy/sd-projeto:3e9fb85e887c1530d31913d6b28b5d55573adf05
+  video: 
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
 imagePullSecrets: []

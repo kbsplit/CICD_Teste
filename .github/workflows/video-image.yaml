@@ -1,0 +1,48 @@
+name: ci
+
+on:
+  push:
+    paths:
+      - Video-app/**
+    branches:
+      - "main"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      -
+        name: Checkout
+        uses: actions/checkout@v3
+      -
+        name: Login to Docker Hub
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKER_USER }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+      -
+        name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
+      -
+        name: Build and push
+        uses: docker/build-push-action@v3
+        with:
+          context: .
+          file: ./Video-app/Dockerfile
+          push: true
+          tags: ${{ secrets.DOCKER_USER }}/sd-projeto:${{ github.sha }}
+  
+  release: 
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+    - uses: actions/checkout@master
+      with:
+        fetch-depth: '0'  # this is important for the git writeback
+    - name: Update Helm Chart Values
+      uses: Nextdoor/helm-set-image-tag-action@main
+      with:
+        values_files: Helm/values.yaml
+        tag_keys: .image.video
+        tag_value: ${{ secrets.DOCKER_USER }}/sd-projeto:${{ github.sha }}
+        commit_branch: main
