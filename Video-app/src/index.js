@@ -27,7 +27,7 @@ app.get("/video", (req, res) => {
 });
 
 //
-// Starts the HTTP server.
+// Starts th HTTP server.
 //
 app.listen(port, () => {
     console.log(`Microservice listening on port ${port}, point your browser at http://localhost:3000/video`);
