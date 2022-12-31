@@ -18,8 +18,10 @@ spec:
       containers:
       - name: website
         image: {{ .Values.image.website }}
+      - name: nginx
+        image: nginx:latest
         imagePullPolicy: IfNotPresent
         ports:
-        - containerPort: 3000
+        - containerPort: 80
       imagePullSecrets:
       - name: acr-secret
