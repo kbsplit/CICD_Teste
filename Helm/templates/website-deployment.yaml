@@ -20,6 +20,6 @@ spec:
         image: {{ .Values.image.website }}
         imagePullPolicy: IfNotPresent
         ports:
-        - containerPort: 80
+        - containerPort: 3000
       imagePullSecrets:
       - name: acr-secret
