@@ -16,8 +16,8 @@ spec:
         app: video
     spec:
       containers:
-      - name: video
+      - name: video-pod
         image: {{ .Values.image.video }}
         imagePullPolicy: IfNotPresent
         ports:
-        - containerPort: 80
+        - containerPort: 3000
