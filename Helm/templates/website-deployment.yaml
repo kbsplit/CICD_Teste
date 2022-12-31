@@ -16,8 +16,8 @@ spec:
         app: website
     spec:
       containers:
-      - name: nginx
-        image: nginx:latest
+      - name: website
+        image: {{ .Values.image.website }}
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 80
