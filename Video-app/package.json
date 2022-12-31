@@ -2,10 +2,10 @@
   "name": "example-1",
   "version": "1.0.0",
   "description": "",
-  "main": "./src/index.js",
+  "main": "Video-app/src/index.js",
   "scripts": {
-    "start": "node ./src/index.js",
-    "start:dev": "nodemon ./src/index.js"
+    "start": "node Video-app/src/index.js",
+    "start:dev": "nodemon Video-app/src/index.js"
   },
   "keywords": [],
   "author": "",

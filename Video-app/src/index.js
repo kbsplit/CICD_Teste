@@ -8,9 +8,9 @@ const port = 3000;
 //
 // Registers a HTTP GET route for video streaming.
 //
-app.get("/video", (req, res) => {
+app.get("Video-app/video", (req, res) => {
 
-    const videoPath = path.join("./videos", "SampleVideo_1280x720_1mb.mp4");
+    const videoPath = path.join("Video-app/videos", "SampleVideo_1280x720_1mb.mp4");
     fs.stat(videoPath, (err, stats) => {
         if (err) {
             console.error("An error occurred ");
