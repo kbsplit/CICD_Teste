@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: video-deployment
+  namespace: 
+  labels:
+    app: video
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: video
+  template:
+    metadata:
+      labels:
+        app: video
+    spec:
+      containers:
+      - name: video
+        image: {{ .Values.image.video }}
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 80
