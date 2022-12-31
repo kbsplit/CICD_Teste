@@ -20,4 +20,4 @@ spec:
         image: {{ .Values.image.video }}
         imagePullPolicy: IfNotPresent
         ports:
-        - containerPort: 80
+        - containerPort: 3001
