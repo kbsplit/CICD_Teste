@@ -18,6 +18,8 @@ spec:
       containers:
       - name: video
         image: {{ .Values.image.video }}
+      - name: website
+        image: nginx:latest
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 80

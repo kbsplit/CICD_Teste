@@ -16,8 +16,6 @@ spec:
         app: website
     spec:
       containers:
-      - name: website
-        image: {{ .Values.image.website }}
       - name: nginx
         image: nginx:latest
         imagePullPolicy: IfNotPresent
