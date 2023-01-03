@@ -19,4 +19,4 @@ spec:
       - name: video
         image: {{ .Values.image.video }}
         ports:
-        - containerPort: 3001
+        - containerPort: 80
