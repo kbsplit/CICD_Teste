@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: video-deployment
-  namespace: 
+  namespace: video
   labels:
     app: video
 spec:
