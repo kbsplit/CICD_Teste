@@ -34,7 +34,7 @@ securityContext: {}
 service:
   type: LoadBalancer
   port: 80
-  protocolo: TCP
+  protocol: TCP
 
 website:
   label: website
