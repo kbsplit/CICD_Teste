@@ -3,12 +3,12 @@ kind: Service
 metadata:
   name: video-service
   labels:
-    app: video
+    app: {{ .Values.video.label }}
 spec:
   type: {{ .Values.service.type }}
   ports:
   - port: 8000
-    protocol: TCP
+    protocol: {{ .Values.service.protocol }}
     targetPort: 3001
   selector:
-    app: video
+    app: {{ .Values.video.label }}

@@ -3,19 +3,19 @@ kind: Deployment
 metadata:
   name: video-deployment
   labels:
-    app: video
+    app: {{ .Values.video.label }}
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      app: video
+      app: {{ .Values.video.label }}
   template:
     metadata:
       labels:
-        app: video
+        app: {{ .Values.video.label }}
     spec:
       containers:
-      - name: video
+      - name: {{ .Values.video.label }}
         image: {{ .Values.image.video }}
         ports:
         - containerPort: 3001
