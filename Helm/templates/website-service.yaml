@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: website-service 
   labels:
-    app: {{ .Values.website.label }}
+    app: website
 spec:
   type: {{ .Values.service.type }}
   ports:
@@ -11,4 +11,4 @@ spec:
     protocol: TCP
     targetPort: 80
   selector:
-    app: {{ .Values.website.label }}
+    app: website
