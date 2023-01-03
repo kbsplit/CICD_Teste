@@ -2,20 +2,21 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: video-deployment
+  namespace: 
   labels:
-    app: {{ .Values.video.label }}
+    app: video
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      app: {{ .Values.video.label }}
+      app: video
   template:
     metadata:
       labels:
-        app: {{ .Values.video.label }}
+        app: video
     spec:
       containers:
-      - name: {{ .Values.video.label }}
+      - name: video
         image: {{ .Values.image.video }}
         ports:
         - containerPort: 3001
