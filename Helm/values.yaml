@@ -34,6 +34,7 @@ securityContext: {}
 service:
   type: LoadBalancer
   port: 80
+  protocolo: TCP
 ingress:
   enabled: false
   className: ""
