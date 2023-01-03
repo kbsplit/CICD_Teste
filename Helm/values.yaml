@@ -38,11 +38,9 @@ service:
 
 website:
   label: website
-  namespace:
 
 video:
   label: video
-  namespace:
 
 ingress:
   enabled: false

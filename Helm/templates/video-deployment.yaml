@@ -2,7 +2,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: video-deployment
-  namespace: {{ .Values.video.label }}
   labels:
     app: {{ .Values.video.label }}
 spec:
