@@ -2,23 +2,22 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: website-deployment
-  namespace: 
+  namespace: {{ .Values.website.namespace }}
   labels:
-    app: website
+    app: {{ .Values.website.label }}
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      app: website
+      app: {{ .Values.website.label }}
   template:
     metadata:
       labels:
-        app: website
+        app: {{ .Values.website.label }}
     spec:
       containers:
-      - name: website
+      - name: {{ .Values.website.label }}
         image: {{ .Values.image.website }}
-        imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 80
       imagePullSecrets:
