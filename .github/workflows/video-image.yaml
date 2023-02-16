@@ -18,8 +18,8 @@ jobs:
         name: Login to Docker Hub
         uses: docker/login-action@v2
         with:
-          username: ${{ secrets.DOCKER_USER }}
-          password: ${{ secrets.DOCKER_PASSWORD }}
+          username: ${{ secrets.DOCKERHUB_USER }}
+          password: ${{ secrets.DOCKERHUB_PASSWORD }}
       -
         name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v2
@@ -30,7 +30,7 @@ jobs:
           context: .
           file: ./Video-app/Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_USER }}/sd-projeto:${{ github.sha }}
+          tags: ${{ secrets.DOCKERHUB_USER }}/sd-projeto:${{ github.sha }}
   
   release: 
     runs-on: ubuntu-latest
@@ -44,5 +44,5 @@ jobs:
       with:
         values_files: Helm/values.yaml
         tag_keys: .image.video
-        tag_value: ${{ secrets.DOCKER_USER }}/sd-projeto:${{ github.sha }}
+        tag_value: ${{ secrets.DOCKERHUB_USER }}/sd-projeto:${{ github.sha }}
         commit_branch: main
